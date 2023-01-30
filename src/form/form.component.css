@@ -1,0 +1,49 @@
+.wrapper{
+  max-width: 837px;
+  max-height: 657px;
+  display: grid;
+  grid-template-columns:1fr 3fr 1fr;
+  grid-template-rows: 100px 1fr 60px 150px ;
+
+  grid-template-areas:
+  'h h h'
+  'b b b'
+  'ch ch1 add'
+  'btn btnn tbnn'
+
+
+
+;
+}
+
+.hd{
+  grid-area: h;
+}
+.tr{
+  margin-left: -15px;
+  grid-area: b;
+}
+
+.add{
+  grid-area: add;
+  margin-left: 120px;
+}
+.ch{
+  grid-area: ch;
+  margin-top: 30px;
+  margin-left: 22px;
+}
+.ch1{
+  grid-area: ch1;
+  margin-top: 30px;
+}
+.btn{
+  grid-area: btn;
+  margin-top: 55px;
+  margin-left: 22px;
+
+}
+.btnn{
+  grid-area: btnn;
+  margin-top: 55px;
+}

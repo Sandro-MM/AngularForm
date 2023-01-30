@@ -1,0 +1,6 @@
+div{
+  padding: 29px 29px;
+  display: grid;
+  grid-template-columns: 257px 519px;
+  grid-gap: 12px;
+}
