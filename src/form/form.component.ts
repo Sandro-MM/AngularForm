@@ -1,4 +1,6 @@
-import {Component} from '@angular/core'
+import {AfterViewInit, Component, Input, ViewChild} from '@angular/core'
+import {InputFieldComponent} from '../UI/inputField.component';
+
 
 @Component({
   selector: 'app-form',
@@ -6,11 +8,31 @@ import {Component} from '@angular/core'
   styleUrls: ['./form.component.css'],
 })
 
-export class FormComponent{
+export class FormComponent {
+
   save = 'Save'
   cancel = 'Cancel'
 
-  inactive = 'inactive'
-  default ='default'
+  inactive = 'Inactive'
+  default ='Default'
+
+   sucsess = ''
+
+  cleart = ''
+
+  toast():any{
+    this.sucsess = 'Sucsess!'
+    setTimeout(()=>this.sucsess = ' ', 1000 )
+
+  }
+
+  @ViewChild(InputFieldComponent) child:any;
+  clear():any{
+    this.child.title = this.cleart
+    this.child.title2 = this.cleart
+  }
+
+  displayToggle= false
+
 
 }

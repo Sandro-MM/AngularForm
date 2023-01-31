@@ -1,22 +1,22 @@
-import {Component, Input, Output} from '@angular/core'
+import {Component, Input} from '@angular/core'
 @Component({
   selector: 'input-field',
   template:`
-  <div class = 'container '>
-    <div class="desc">{{Desc}}</div>
-    <div >
-      <form >
-        <div class="border">
-          <textarea class="input" [value] = 'title' (keyup)="onInput($event)" ></textarea>
-        </div>
-        <div class="desc">{{Desc2}}</div>
-        <div class="border">
-          <textarea class="input" [value] = 'title2' (keyup)="input($event)" ></textarea>
-        </div>
+    <div class='container '>
+      <div class="desc">{{Desc}}</div>
+      <div>
+        <form>
+          <div class="border">
+            <textarea class="input" [value]='title' [maxLength]="MaxLength" (keyup)="onInput($event)"></textarea>
+          </div>
+          <div class="desc">{{Desc2}}</div>
+          <div class="border">
+            <textarea class="input" [value]='title2' [maxLength]="MaxLength" (keyup)="input($event)"></textarea>
+          </div>
 
-      </form>
+        </form>
+      </div>
     </div>
-  </div>
   `,
 
   styles:[`
@@ -25,22 +25,23 @@ import {Component, Input, Output} from '@angular/core'
     height: 100%;
   }
   .desc{
-    padding: 5px 0;
+    padding: 2px 10px;
     font-size: 15px;
     color: #406177;
-    font-style: italic;
   }
   .border{
-    margin: 10px;
+    margin: 5px 10px;
     width: 100%;
     height: 79px;
     outline: #FFAE00 solid 2px;
   }
   .input{
     all: unset;
-    padding: 5px;
+    padding: 4px;
     width: 95%;
     overflow: hidden;
+    font-size: 14px;
+    line-height: 16px;
   }
   `]
 })
@@ -50,9 +51,12 @@ export class InputFieldComponent {
   @Input('desc') Desc = '';
   @Input('desc2') Desc2 = '';
 
-  title = ''
+   title:string = ''
 
-  title2 = ''
+   title2:string = ''
+  @Input('MaxLength') MaxLength = '';
+
+
 
 
 
@@ -203,5 +207,8 @@ export class InputFieldComponent {
       this.title = text.join('')
     }
   }
+
+
+
 }
 

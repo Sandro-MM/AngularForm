@@ -2,7 +2,7 @@ import {Component, Input} from '@angular/core'
 
 @Component({
   selector: 'button-component',
-  template: `<button
+  template: `<button (click)="Click"
     [class.a]="Desc=='Save'"
     [class.b]="Desc=='Cancel'"
   >
@@ -32,4 +32,8 @@ import {Component, Input} from '@angular/core'
 
 export class ButtonComponent{
   @Input('desc') Desc = '';
-};
+
+  @Input('Click') Click = '';
+
+
+}

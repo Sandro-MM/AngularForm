@@ -14,7 +14,7 @@ import {Component, Input} from '@angular/core'
     }
     span{
       position: absolute;
-      margin: 13px 0;
+      margin: 0 0;
       color: #406177;
       font-size: 15px;
     }

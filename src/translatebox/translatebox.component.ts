@@ -14,8 +14,8 @@ export class TranslateboxComponent {
   lftr = 'Legal Form (Transliterated)'
   lffdtr = 'Legal Form full description (Transliterated)'
 
-  rateControl = new FormControl("", [Validators.max(128), Validators.min(1)])
-  rateControl2 = new FormControl("", [Validators.max(1024), Validators.min(1)])
+  l = '128'
+  l2 = '1024'
 
 
 

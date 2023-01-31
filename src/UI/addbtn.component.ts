@@ -3,7 +3,7 @@ import {Component, Input} from '@angular/core'
 @Component({
   selector: 'add-btn',
   template:
-    `<button class="btn">
+    `<button class="btn" >
         <div class="a"></div>
         <div class="b"></div>
     </button>`,

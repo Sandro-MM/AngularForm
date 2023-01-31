@@ -1,8 +1,8 @@
 .wrapper{
-  max-width: 837px;
-  max-height: 657px;
+  max-width: 840px;
+  max-height: 857px;
   display: grid;
-  grid-template-columns:1fr 3fr 1fr;
+  grid-template-columns:1fr 1fr  1fr;
   grid-template-rows: 100px 1fr 60px 150px ;
 
   grid-template-areas:
@@ -16,12 +16,41 @@
 ;
 }
 
+.wrapper2{
+  max-width: 840px;
+  max-height: 1557px;
+  display: grid;
+  grid-template-columns: 280px 280px 280px;
+  grid-template-rows: 100px 1fr 1fr 60px 150px ;
+  grid-template-areas:
+  'h h h'
+  'b b b'
+  'b22 b22 b22'
+  'ch ch1 add'
+  'btn btnn tbnn'
+;
+}
+
 .hd{
   grid-area: h;
 }
 .tr{
-  margin-left: -15px;
+
   grid-area: b;
+  width: 100%;
+  height: 100%;
+}
+.tr2{
+  grid-area: b22;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+trr{
+  margin-left: -50px;
+  grid-area: b22;
+  width: 100%;
+  height: 100%;
 }
 
 .add{
@@ -46,4 +75,11 @@
 .btnn{
   grid-area: btnn;
   margin-top: 55px;
+}
+.save{
+  width: 150px;
+  height: 200px;
+  position: absolute;
+  margin: 350px 300px;
+  font-size: 30px;
 }
